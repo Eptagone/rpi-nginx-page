@@ -1,0 +1,13 @@
+/**
+*   Name: utils/_colors.scss
+*   Description: Define a set of color variables, based on the theme. Also, define a set of functions and mixins to manage the color theme.
+*/
+
+@forward 'functions/colors';
+@forward 'mixins/colors';
+
+@use 'functions/colors' as fc;
+
+$primary-color: fc.get-color('primary', #BC1142);
+$base-light: fc.get-color('base-light', #FFFFFF);
+$base-dark: fc.get-color('base-dark', #000000);

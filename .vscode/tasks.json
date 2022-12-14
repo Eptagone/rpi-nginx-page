@@ -1,0 +1,55 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Dev Server",
+			"icon": {
+				"id": "server-environment",
+				"color": "terminal.ansiMagenta"
+			},
+			"type": "npm",
+			"script": "dev",
+			"detail": "vite",
+			"isBackground": true,
+			"runOptions": {
+				"instanceLimit": 1
+			},
+			"problemMatcher": {
+				"base": "$tsc-watch",
+				"severity": "error",
+				"source": "webpack dev server",
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^\\s*VITE v\\d*(?:\\.\\d*)*\\s*ready in \\d*[(?:\\.\\d*)] [m][s]$",
+					"endsPattern": "^\\s*VITE v\\d*(?:\\.\\d*)*\\s*ready in \\d*[(?:\\.\\d*)] [m][s]$"
+				}
+			}
+		},
+		{
+			"label": "Build",
+			"icon": {
+				"id": "package",
+				"color": "terminal.ansiGreen"
+			},
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"detail": "tsc && vite build"
+		},
+		{
+			"label": "Preview",
+			"icon": {
+				"id": "eye",
+				"color": "terminal.ansiYellow"
+			},
+			"type": "npm",
+			"script": "preview",
+			"problemMatcher": [],
+			"detail": "vite preview"
+		}
+	]
+}

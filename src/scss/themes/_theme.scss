@@ -1,0 +1,18 @@
+/**
+*   Name: theme.scss
+*   Description: Color theme.
+*/
+
+@use '../utilities/colors' as c;
+
+// Main theme colors.
+$main-theme: (
+    "primary": #BC1142,
+    "base-light": #FFFFFF,
+    "base-dark": #002341,
+);
+
+// Generate the theme colors.
+:root {
+    @include c.set-color-range($main-theme);
+}

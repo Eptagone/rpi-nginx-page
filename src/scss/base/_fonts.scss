@@ -1,0 +1,68 @@
+/**
+    Name: base/fonts.scss
+    Description: Fonts and font-face declarations
+*/
+
+// ---------------- Font declarations ----------------
+$fonts: (
+    "Cascadia Code": (
+        "folder": "Cascadia Code",
+        "format": "woff2",
+        "extention": "woff2",
+        "styles": (
+            "normal": "CascadiaCode",
+            "italic": "CascadiaCodeItalic",
+        ),
+        "weights": 200 700 
+    ),
+    "Cascadia Code PL": (
+        "folder": "Cascadia Code",
+        "format": "woff2",
+        "extention": "woff2",
+        "styles": (
+            "normal": "CascadiaCodePL",
+            "italic": "CascadiaCodePLItalic",
+        ),
+        "weights": 200 700
+    ),
+    "Cascadia Mono": (
+        "folder": "Cascadia Code",
+        "format": "woff2",
+        "extention": "woff2",
+        "styles": (
+            "normal": "CascadiaMono",
+            "italic": "CascadiaMonoItalic",
+        ),
+        "weights": 200 700
+    ),
+    "Cascadia Mono PL": (
+        "folder": "Cascadia Code",
+        "format": "woff2",
+        "extention": "woff2",
+        "styles": (
+            "normal": "CascadiaMonoPL",
+            "italic": "CascadiaMonoPLItalic",
+        ),
+        "weights": 200 700
+    )
+);
+
+// ---------------- Font-face declarations ----------------
+@each $name, $data in $fonts {
+    $folder: map-get($data, "folder");
+    $format: map-get($data, "format");
+    $extention: map-get($data, "extention");
+    $styles: map-get($data, "styles");
+    $weights: map-get($data, "weights");
+
+    // Loop through all font families.
+    @each $style, $file in $styles {
+        @font-face {
+            font-display: swap;
+            font-family: $name;
+            src: url("/fonts/#{$folder}/#{$file}.#{$extention}") format("#{$format}");
+            font-style: $style;
+            font-weight: $weights;
+        }
+    }
+}

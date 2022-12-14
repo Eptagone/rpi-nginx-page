@@ -1,0 +1,58 @@
+/**
+*	Name: main.scss
+*	Description: Main styles.
+*/
+
+@use 'base';
+@use 'themes/theme';
+@use 'utilities/colors' as c;
+@use 'utilities/fonts' as f;
+
+body {
+	margin: 0 auto;
+	background-color: c.$base-dark;
+	color: c.$base-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: c.$primary-color;
+}
+
+h1 {
+	font-size: xx-large;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+
+	section, header, .content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header {
+		gap: 0.5rem;
+	}
+
+	section {
+		gap: 1rem;
+		margin: 20px;
+	}
+
+	b {
+		color: c.$primary-color;
+	}
+
+	p {
+		font-style: italic;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		font-weight: 300;
+	}
+}

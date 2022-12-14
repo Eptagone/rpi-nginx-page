@@ -1,0 +1,12 @@
+/**
+    Name: base/typography.scss
+    Description: Typography styles.
+*/
+
+@use 'fonts';
+@use '../utilities/fonts' as f;
+
+body {
+    font-family: f.$cascadia-code;
+    font-size: 1.2rem;
+}
