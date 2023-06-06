@@ -1,0 +1,8 @@
+/*
+    Name: main.css
+    Description: Main CSS file for the project
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

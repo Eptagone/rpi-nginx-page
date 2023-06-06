@@ -4,6 +4,9 @@
  */
 
 import { UserConfig } from 'vite';
+import preact from '@preact/preset-vite';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 const cssPattern = /\.css$/;
 const fontPattern = /\.(woff|woff2|eot|ttf|otf)$/;
@@ -55,7 +58,16 @@ const config: UserConfig = {
 		modules: {
 			localsConvention: 'camelCaseOnly',
 		},
-	}
+		postcss: {
+			plugins: [
+				tailwindcss(),
+				autoprefixer(),
+			],
+		},
+	},
+	plugins: [
+		preact(),
+	]
 };
 
 // Export configuration
