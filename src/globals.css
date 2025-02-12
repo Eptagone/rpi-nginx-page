@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@source "./**/*.tsx";
+@plugin "tailwindcss-animated";
+
+@theme {
+    --color-primary-50: #f8e7ec;
+    --color-primary-100: #f2cfd9;
+    --color-primary-200: #e4a0b3;
+    --color-primary-300: #d7708e;
+    --color-primary-400: #c94168;
+    --color-primary-500: #bc1142;
+    --color-primary-600: #960e35;
+    --color-primary-700: #710a28;
+    --color-primary-800: #4b071a;
+    --color-primary-900: #26030d;
+
+    --font-cascadia-code: "Cascadia Code", "Courier New", Courier, monospace;
+	--font-cascadia-code-pl: "Cascadia Code PL", "Courier New", Courier, monospace;
+	--font-cascadia-mono: "Cascadia Mono", "Courier New", Courier, monospace;
+	--font-cascadia-mono-pl: "Cascadia Mono PL", "Courier New", Courier, monospace;
+}

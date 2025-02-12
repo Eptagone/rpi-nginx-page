@@ -1,0 +1,21 @@
+---
+import Logo from "@assets/raspberry.svg";
+import Layout from "@layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Raspberry PI">
+    <div id="app" class="animate-fade-up m-auto text-center text-white">
+        <section class="m-5 flex flex-col items-center">
+            <header class="flex flex-col items-center">
+                <Image src={Logo} alt="Raspberry PI Logo" class="mb-4 h-44 w-auto" />
+                <h1 title="Raspberry PI Server" class="text-primary-500 text-3xl">Raspberry PI Server</h1>
+            </header>
+            <div class="content">
+                <p class="font-light italic">
+                    If you see this page, the <b class="text-primary-500">nginx web server</b> is successfully installed and working.
+                </p>
+            </div>
+        </section>
+    </div>
+</Layout>
